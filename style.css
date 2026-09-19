@@ -1,0 +1,698 @@
+/* ========================================
+   1. COLOUR PALETTE + RESET
+======================================== */
+
+:root {
+    --oat-silk: #F3EBDD;
+    --mulberry-kiss: #8E3B5A;
+    --blue-reverie: #6E86A6;
+    --midnight-custard: #252238;
+    --deep-blue: #4D6383;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--oat-silk);
+    color: var(--midnight-custard);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ========================================
+   2. NAVBAR
+======================================== */
+
+.navbar {
+    width: 100%;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--oat-silk);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--mulberry-kiss);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+.nav-links a {
+    font-size: 0.95rem;
+    color: var(--midnight-custard);
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--mulberry-kiss);
+}
+
+
+/* ========================================
+   3. HERO
+======================================== */
+
+.hero {
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 80px 6%;
+
+    background-color: var(--oat-silk);
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 900px;
+}
+
+.hero-small {
+    color: var(--mulberry-kiss);
+
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+
+    color: var(--midnight-custard);
+}
+
+.hero-description {
+    max-width: 650px;
+
+    margin: 0 auto 35px;
+
+    font-size: 1.1rem;
+
+    color: var(--blue-reverie);
+}
+
+.hero-button,
+.volunteer-button,
+.contact-button {
+    display: inline-block;
+
+    padding: 13px 28px;
+
+    border-radius: 30px;
+
+    background-color: var(--mulberry-kiss);
+
+    color: var(--oat-silk);
+
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+.hero-button:hover,
+.volunteer-button:hover,
+.contact-button:hover {
+    background-color: var(--midnight-custard);
+
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   4. GENERAL SECTIONS
+======================================== */
+
+section {
+    padding: 100px 6%;
+}
+
+.section-label {
+    color: var(--mulberry-kiss);
+
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+
+    font-weight: bold;
+
+    margin-bottom: 18px;
+}
+
+section h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+
+/* ========================================
+   5. ABOUT US
+======================================== */
+
+.about {
+    background-color: var(--midnight-custard);
+
+    color: var(--oat-silk);
+}
+
+.about-content {
+    max-width: 850px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.about .section-label {
+    color: var(--blue-reverie);
+}
+
+.about p:not(.section-label) {
+    max-width: 750px;
+
+    margin: 15px auto;
+
+    color: var(--oat-silk);
+
+    opacity: 0.9;
+}
+
+
+/* ========================================
+   6. OUR VALUES
+======================================== */
+
+.values {
+    background-color: var(--oat-silk);
+}
+
+.values-content {
+    max-width: 1100px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.values-grid {
+    margin-top: 50px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.value-card {
+    padding: 35px 25px;
+
+    background-color: var(--blue-reverie);
+
+    color: var(--oat-silk);
+
+    border-radius: 18px;
+
+    text-align: left;
+
+    transition: 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-6px);
+}
+
+.value-card h3 {
+    font-size: 1.3rem;
+
+    margin-bottom: 12px;
+
+    color: var(--midnight-custard);
+}
+
+.value-card p {
+    font-size: 0.95rem;
+}
+
+
+/* ========================================
+   7. OUR GOAL
+======================================== */
+
+.goal {
+    background-color: var(--deep-blue);
+
+    color: var(--oat-silk);
+}
+
+.goal-content {
+    max-width: 1100px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.goal .section-label {
+    color: var(--mulberry-kiss);
+
+    font-size: 1.4rem;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+}
+
+.goal h2 {
+    font-size: clamp(3rem, 7vw, 6rem);
+
+    line-height: 1;
+
+    color: var(--oat-silk);
+
+    max-width: 1000px;
+
+    margin: 0 auto 30px;
+}
+
+.goal-content > p:not(.section-label) {
+    max-width: 750px;
+
+    margin: 0 auto;
+}
+
+.goal-points {
+    margin-top: 50px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.goal-point {
+    padding: 30px;
+
+    background-color: var(--oat-silk);
+
+    color: var(--midnight-custard);
+
+    border-radius: 18px;
+}
+
+.goal-point h3 {
+    margin-bottom: 10px;
+
+    color: var(--mulberry-kiss);
+}
+
+
+/* ========================================
+   8. VOLUNTEERS
+======================================== */
+
+.volunteers {
+    background-color: var(--oat-silk);
+
+    text-align: center;
+}
+
+.volunteers-content {
+    max-width: 700px;
+
+    margin: auto;
+}
+
+.volunteers-content > p:not(.section-label):not(.volunteer-count) {
+    margin-bottom: 30px;
+}
+
+.volunteer-count {
+    margin-top: 15px;
+
+    font-size: 0.9rem;
+
+    color: var(--blue-reverie);
+}
+
+
+/* ========================================
+   9. FOUNDER
+======================================== */
+
+.founder {
+    background-color: var(--midnight-custard);
+
+    color: var(--oat-silk);
+}
+
+.founder-content {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.founder-image img {
+    width: 100%;
+
+    max-width: 350px;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+}
+
+.founder-text h2 {
+    color: var(--oat-silk);
+}
+
+.founder-text > p:not(.section-label) {
+    margin-bottom: 20px;
+}
+
+.founder-role {
+    color: var(--blue-reverie);
+}
+
+
+/* ========================================
+   10. CONTACT
+======================================== */
+
+.contact {
+    background-color: var(--mulberry-kiss);
+
+    color: var(--oat-silk);
+
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 700px;
+
+    margin: auto;
+}
+
+.contact .section-label {
+    color: var(--midnight-custard);
+}
+
+.contact h2 {
+    color: var(--oat-silk);
+}
+
+.contact-details {
+    margin: 30px 0;
+}
+
+.contact-details p {
+    margin: 10px 0;
+}
+
+.contact-details a {
+    text-decoration: underline;
+}
+
+.contact-button {
+    background-color: var(--oat-silk);
+
+    color: var(--midnight-custard);
+}
+
+.contact-button:hover {
+    background-color: var(--midnight-custard);
+
+    color: var(--oat-silk);
+}
+
+
+/* ========================================
+   11. FOOTER
+======================================== */
+
+footer {
+    padding: 35px 6%;
+
+    background-color: var(--midnight-custard);
+
+    color: var(--oat-silk);
+
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer p:first-child {
+    font-size: 1.2rem;
+
+    font-weight: bold;
+
+    color: var(--mulberry-kiss);
+}
+
+
+/* ========================================
+   12. TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .goal-points {
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 15px;
+    }
+
+    .goal-point {
+        padding: 25px 18px;
+    }
+
+    .founder-content {
+        grid-template-columns: 0.9fr 1.1fr;
+
+        gap: 40px;
+    }
+}
+
+
+/* ========================================
+   13. MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    /* NAVBAR */
+
+    .navbar {
+        position: relative;
+
+        flex-direction: column;
+
+        padding: 18px 5%;
+
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+
+        text-align: center;
+    }
+
+    .nav-links {
+        width: 100%;
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 8px 12px;
+    }
+
+    .nav-links a {
+        font-size: 0.75rem;
+    }
+
+
+    /* GENERAL SECTIONS */
+
+    section {
+        width: 100%;
+
+        padding: 90px 7%;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 85vh;
+
+        padding: 70px 7%;
+    }
+
+    .hero-small {
+        font-size: 0.75rem;
+
+        letter-spacing: 2px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.7rem, 13vw, 4.5rem);
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+
+    /* ABOUT */
+
+    .about-content {
+        width: 100%;
+    }
+
+
+    /* VALUES */
+
+    .values-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+        margin-top: 35px;
+    }
+
+    .value-card {
+        width: 100%;
+    }
+
+
+    /* GOAL */
+
+    .goal .section-label {
+        font-size: 1.1rem;
+
+        letter-spacing: 3px;
+    }
+
+    .goal h2 {
+        font-size: clamp(2.7rem, 12vw, 4.5rem);
+    }
+
+    .goal-points {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+        margin-top: 35px;
+    }
+
+    .goal-point {
+        width: 100%;
+    }
+
+
+    /* VOLUNTEERS */
+
+    .volunteers-content {
+        width: 100%;
+    }
+
+
+    /* FOUNDER */
+
+    .founder-content {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 35px;
+
+        text-align: center;
+    }
+
+    .founder-image img {
+        width: 100%;
+
+        max-width: 300px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-content {
+        width: 100%;
+    }
+
+
+    /* GENERAL HEADINGS */
+
+    section h2 {
+        font-size: clamp(2.3rem, 10vw, 3.5rem);
+    }
+}
