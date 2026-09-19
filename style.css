@@ -53,9 +53,25 @@ a {
 }
 
 .logo {
-    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo img {
+    width: 75px;
+    height: 75px;
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.logo span {
+    font-size: 0.85rem;
     font-weight: bold;
     color: var(--mulberry-kiss);
+    white-space: nowrap;
 }
 
 .nav-links {
