@@ -414,16 +414,25 @@ section h2 {
     align-items: center;
 }
 
+.founder-image {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
 .founder-image img {
     width: 100%;
-
-    max-width: 350px;
-
-    aspect-ratio: 1 / 1;
-
+    height: 100%;
     object-fit: cover;
+    object-position: center top;
+    display: block;
+    border-radius: 50%;
+    transition: transform 0.4s ease;
+}
 
-    border-radius: 20px;
+.founder-image:hover img {
+    transform: scale(1.07) rotate(1deg);
 }
 
 .founder-text h2 {
@@ -682,23 +691,7 @@ footer p:first-child {
 
     /* FOUNDER */
 
-    .founder-content {
-        display: flex;
-
-        flex-direction: column;
-
-        gap: 35px;
-
-        text-align: center;
-    }
-
-    .founder-image img {
-        width: 100%;
-
-        max-width: 300px;
-    }
-
-
+  
     /* CONTACT */
 
     .contact-content {
