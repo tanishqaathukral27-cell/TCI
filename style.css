@@ -1078,3 +1078,41 @@ footer p:first-child {
     }
 
 }
+
+@media (max-width: 600px) {
+
+    .founder {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 70px 25px;
+        gap: 45px;
+    }
+
+    .founder-image {
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+    .founder-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        border-radius: 50%;
+    }
+
+    .founder-info {
+        width: 100%;
+        text-align: left;
+    }
+
+    .founder h2 {
+        font-size: 3rem;
+        line-height: 0.95;
+    }
+
+}
