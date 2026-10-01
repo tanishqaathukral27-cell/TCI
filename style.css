@@ -417,6 +417,7 @@ section h2 {
 .founder-image {
     width: 350px;
     height: 350px;
+
     border-radius: 50%;
     overflow: hidden;
 }
@@ -424,10 +425,14 @@ section h2 {
 .founder-image img {
     width: 100%;
     height: 100%;
+
     object-fit: cover;
     object-position: center top;
+
     display: block;
+
     border-radius: 50%;
+
     transition: transform 0.4s ease;
 }
 
@@ -691,7 +696,52 @@ footer p:first-child {
 
     /* FOUNDER */
 
-  
+    .founder {
+        width: 100%;
+        padding: 90px 7%;
+    }
+
+    .founder-content {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 45px;
+    }
+
+    .founder-image {
+        width: 300px;
+        height: 300px;
+
+        margin: 0 auto;
+
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+    .founder-image img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: center top;
+
+        display: block;
+        border-radius: 50%;
+    }
+
+    .founder-text {
+        width: 100%;
+        text-align: left;
+    }
+
+    .founder-text h2 {
+        font-size: 3rem;
+        line-height: 1;
+    }
+
+
     /* CONTACT */
 
     .contact-content {
@@ -705,8 +755,10 @@ footer p:first-child {
         font-size: clamp(2.3rem, 10vw, 3.5rem);
     }
 }
+
+
 /* ========================================
-   CORE TEAM
+   14. CORE TEAM
 ======================================== */
 
 .core-team {
@@ -724,9 +776,13 @@ footer p:first-child {
 
 .core-team h2 {
     color: var(--midnight-custard);
+
     font-size: clamp(3rem, 7vw, 6rem);
+
     line-height: 0.95;
+
     max-width: 800px;
+
     margin-bottom: 80px;
 }
 
@@ -743,7 +799,9 @@ footer p:first-child {
 
 .team-member {
     display: grid;
+
     grid-template-columns: 42% 58%;
+
     align-items: center;
 
     min-height: 280px;
@@ -769,6 +827,8 @@ footer p:first-child {
     border-radius: 50%;
 
     display: block;
+
+    transition: transform 0.4s ease;
 }
 
 
@@ -782,6 +842,7 @@ footer p:first-child {
     color: var(--mulberry-kiss);
 
     font-size: 0.85rem;
+
     font-weight: bold;
 
     letter-spacing: 3px;
@@ -793,6 +854,7 @@ footer p:first-child {
     color: var(--midnight-custard);
 
     font-size: clamp(2rem, 4vw, 4rem);
+
     line-height: 1;
 
     margin-bottom: 12px;
@@ -802,6 +864,7 @@ footer p:first-child {
     color: var(--blue-reverie);
 
     font-size: 1.1rem;
+
     font-weight: 600;
 
     margin: 0;
@@ -828,18 +891,15 @@ footer p:first-child {
     grid-row: 1;
 
     text-align: right;
+
     padding-left: 0;
     padding-right: 20px;
 }
 
 
 /* ========================================
-   HOVER
+   CORE TEAM HOVER
 ======================================== */
-
-.team-member img {
-    transition: transform 0.4s ease;
-}
 
 .team-member:hover img {
     transform: scale(1.04);
@@ -847,13 +907,14 @@ footer p:first-child {
 
 
 /* ========================================
-   MOBILE
+   CORE TEAM MOBILE
 ======================================== */
 
 @media (max-width: 600px) {
 
     .core-team h2 {
         font-size: 3rem;
+
         margin-bottom: 45px;
     }
 
@@ -899,70 +960,82 @@ footer p:first-child {
 
     .team-number {
         font-size: 0.7rem;
+
         margin-bottom: 8px;
     }
-
 }
-/* =========================
-   EVENTS
-========================= */
+
+
+/* ========================================
+   15. EVENTS
+======================================== */
 
 .events {
     background-color: var(--midnight-custard);
+
     color: var(--oat-silk);
 }
 
 .events-content {
     max-width: 1200px;
+
     margin: auto;
 }
 
 .events .section-label {
     color: var(--blue-reverie);
+
     margin-bottom: 15px;
 }
 
 .events h2 {
     color: var(--oat-silk);
+
     font-size: clamp(3rem, 7vw, 6rem);
+
     line-height: 0.95;
+
     max-width: 900px;
+
     margin-bottom: 70px;
 }
 
 
-/* =========================
-   EVENT CARD
-========================= */
+/* EVENT CARD */
 
 .event-card {
     display: grid;
+
     grid-template-columns: 420px 1fr;
+
     gap: 70px;
+
     align-items: center;
 
     padding: 55px;
 
     background-color: var(--oat-silk);
+
     color: var(--midnight-custard);
 
     border-radius: 25px;
 }
 
 
-/* =========================
-   EVENT POSTER
-========================= */
+/* EVENT POSTER */
 
 .event-poster {
     width: 100%;
+
     overflow: hidden;
+
     border-radius: 18px;
 }
 
 .event-poster img {
     width: 100%;
     height: auto;
+
     display: block;
 
     object-fit: cover;
@@ -975,9 +1048,7 @@ footer p:first-child {
 }
 
 
-/* =========================
-   EVENT INFORMATION
-========================= */
+/* EVENT INFORMATION */
 
 .event-info {
     max-width: 600px;
@@ -985,59 +1056,71 @@ footer p:first-child {
 
 .event-date {
     color: var(--mulberry-kiss);
+
     font-size: 0.85rem;
+
     font-weight: 700;
+
     letter-spacing: 3px;
+
     margin-bottom: 20px;
 }
 
 .event-info h3 {
     color: var(--midnight-custard);
+
     font-size: clamp(2rem, 4vw, 4rem);
+
     line-height: 1;
+
     margin-bottom: 25px;
 }
 
 .event-info p:not(.event-date) {
     color: var(--deep-blue);
+
     font-size: 1.05rem;
+
     line-height: 1.7;
+
     max-width: 550px;
 }
 
 
-/* =========================
-   REGISTER BUTTON
-========================= */
+/* EVENT BUTTON */
 
 .event-button {
     display: inline-block;
 
     margin-top: 25px;
+
     padding: 14px 28px;
 
     background-color: var(--mulberry-kiss);
+
     color: var(--oat-silk);
 
     text-decoration: none;
+
     font-weight: 600;
 
     border-radius: 50px;
 
-    transition: 
+    transition:
         transform 0.3s ease,
         background-color 0.3s ease;
 }
 
 .event-button:hover {
     transform: translateY(-3px);
+
     background-color: var(--deep-blue);
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* ========================================
+   EVENTS MOBILE
+======================================== */
 
 @media (max-width: 600px) {
 
@@ -1047,11 +1130,13 @@ footer p:first-child {
 
     .events h2 {
         font-size: 3rem;
+
         margin-bottom: 40px;
     }
 
     .event-card {
         grid-template-columns: 1fr;
+
         gap: 35px;
 
         padding: 25px;
@@ -1061,7 +1146,9 @@ footer p:first-child {
 
     .event-poster {
         width: 100%;
+
         max-width: 400px;
+
         margin: 0 auto;
     }
 
@@ -1076,43 +1163,4 @@ footer p:first-child {
     .event-button {
         margin-top: 20px;
     }
-
-}
-
-@media (max-width: 600px) {
-
-    .founder {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        padding: 70px 25px;
-        gap: 45px;
-    }
-
-    .founder-image {
-        width: 300px;
-        height: 300px;
-        margin: 0 auto;
-        overflow: hidden;
-        border-radius: 50%;
-    }
-
-    .founder-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        border-radius: 50%;
-    }
-
-    .founder-info {
-        width: 100%;
-        text-align: left;
-    }
-
-    .founder h2 {
-        font-size: 3rem;
-        line-height: 0.95;
-    }
-
 }
