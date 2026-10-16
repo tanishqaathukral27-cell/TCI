@@ -1037,123 +1037,209 @@ footer p:first-child {
    15. EVENTS
 ======================================== */
 
+/* ========================================
+   EVENTS — REUSABLE DEFAULT STYLING
+======================================== */
+
 .events {
     background-color: var(--midnight-custard);
-
     color: var(--oat-silk);
 }
 
 .events-content {
+    width: 100%;
     max-width: 1200px;
-
-    margin: auto;
+    margin: 0 auto;
 }
 
 .events .section-label {
     color: var(--blue-reverie);
-
-    margin-bottom: 15px;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 18px;
 }
 
 .events h2 {
     color: var(--oat-silk);
-
-    font-size: clamp(3rem, 7vw, 6rem);
-
-    line-height: 0.95;
-
-    max-width: 900px;
-
-    margin-bottom: 70px;
+    font-size: clamp(2.5rem, 7vw, 5.5rem);
+    line-height: 1.05;
+    margin-bottom: 35px;
+    overflow-wrap: anywhere;
 }
 
 
-/* EVENT CARD */
+/* EVENT LAYOUT */
 
 .event-card {
     display: grid;
-
-    grid-template-columns: 420px 1fr;
-
-    gap: 70px;
-
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
     align-items: center;
+    gap: clamp(25px, 5vw, 60px);
 
-    padding: 55px;
+    padding: clamp(22px, 5vw, 50px);
 
     background-color: var(--oat-silk);
-
     color: var(--midnight-custard);
 
-    border-radius: 25px;
+    border-radius: 22px;
 }
 
 
-/* EVENT POSTER */
+/* OPTIONAL EVENT POSTER */
 
 .event-poster {
     width: 100%;
-
+    min-width: 0;
     overflow: hidden;
-
-    border-radius: 18px;
+    border-radius: 16px;
 }
 
 .event-poster img {
+    display: block;
     width: 100%;
     height: auto;
-
-    display: block;
-
-    object-fit: cover;
-
-    transition: transform 0.4s ease;
+    object-fit: contain;
+    border-radius: inherit;
+    transition: transform 0.35s ease;
 }
 
 .event-poster:hover img {
-    transform: scale(1.03);
+    transform: scale(1.02);
 }
 
 
-/* EVENT INFORMATION */
+/* EVENT DETAILS */
 
 .event-info {
-    max-width: 600px;
+    width: 100%;
+    min-width: 0;
 }
 
 .event-date {
     color: var(--mulberry-kiss);
-
-    font-size: 0.85rem;
-
-    font-weight: 700;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
 }
 
 .event-info h3 {
     color: var(--midnight-custard);
-
-    font-size: clamp(2rem, 4vw, 4rem);
-
-    line-height: 1;
-
-    margin-bottom: 25px;
+    font-size: clamp(1.8rem, 4vw, 3.2rem);
+    line-height: 1.1;
+    margin-bottom: 20px;
+    overflow-wrap: anywhere;
 }
 
 .event-info p:not(.event-date) {
     color: var(--deep-blue);
-
-    font-size: 1.05rem;
-
-    line-height: 1.7;
-
-    max-width: 550px;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 18px;
 }
 
 
+/* OPTIONAL EVENT BUTTON */
+
+.event-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 13px 25px;
+
+    background-color: var(--mulberry-kiss);
+    color: var(--oat-silk);
+
+    border-radius: 50px;
+    font-weight: bold;
+    text-align: center;
+
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.event-button:hover {
+    background-color: var(--deep-blue);
+    transform: translateY(-2px);
+}
+
+
+/* COMING SOON / NO EVENT CARD */
+
+.events-coming-soon {
+    text-align: center;
+    padding: 45px 0;
+}
+
+.events-coming-soon h3 {
+    color: var(--oat-silk);
+    font-size: clamp(2rem, 6vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 18px;
+}
+
+.events-coming-soon p {
+    max-width: 550px;
+    margin: 0 auto;
+    color: var(--blue-reverie);
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   EVENTS — TABLET
+======================================== */
+
+@media (max-width: 850px) {
+    .event-card {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 25px;
+    }
+}
+
+
+/* ========================================
+   EVENTS — MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+    .events {
+        padding: 70px 7%;
+    }
+
+    .events h2 {
+        font-size: clamp(2.4rem, 10vw, 3.5rem);
+        margin-bottom: 30px;
+    }
+
+    .event-card {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+        padding: 22px;
+        border-radius: 18px;
+    }
+
+    .event-poster {
+        max-width: 100%;
+    }
+
+    .event-info h3 {
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+    }
+
+    .event-info p:not(.event-date) {
+        font-size: 0.95rem;
+    }
+
+    .event-button {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    .events-coming-soon {
+        padding: 20px 0;
+    }
+}
 /* EVENT BUTTON */
 
 .event-button {
